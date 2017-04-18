@@ -1,0 +1,61 @@
+html, body{
+  height: 100%;
+}
+#app{
+  height: 100%;
+}
+.side-bar{
+  position: absolute;
+  width: 225px;
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  overflow: visible;
+  border-right: 1px solid #d9d9d9;
+  box-shadow: 0 0 4px #d9d9d9;
+  transition: all .3s cubic-bezier(.215,.61,.355,1);
+  z-index: 1;
+  text-align: center;
+}
+.side-bar.toggled{
+  width: 50px;
+}
+.side-bar img{
+  width: 140px;
+}
+.side-bar .nav-icon{
+  font-size: 30px;
+  color: #0084ff;
+}
+.side-bar .u-menu{
+  width: 224px;
+  border: none;
+  box-shadow: none;
+  text-align: left;
+}
+
+.side-bar.toggled .u-menu-vertical > .u-menu-submenu > .u-menu-submenu-title,
+.side-bar.toggled .u-menu-vertical > .u-menu-item{
+  padding: 0 10px;
+}
+.side-bar.toggled .u-menu-vertical > .u-menu-item{
+  height: 42px;
+  line-height: 42px;
+}
+.side-bar.toggled .u-menu .u-menu-vertical.u-menu-sub{
+  border: 1px solid #d9d9d9;
+  box-shadow: 0 0 4px #d9d9d9;
+}
+
+.side-bar.toggled .u-menu{
+  width: 48px;
+}
+.content{
+  margin-left: 225px;
+  overflow: auto;
+  height: 100%;
+  transition: all .3s cubic-bezier(.215,.61,.355,1);
+}
+.content.toggled{
+  margin-left: 50px;
+}

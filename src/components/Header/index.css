@@ -1,0 +1,19 @@
+
+.header .u-navbar{
+	height: 50px;
+}
+.header .toggle{
+	display: inline-block;
+	text-align: center;
+	height: 48px;
+	width: 48px;
+	line-height: 48px;
+	margin-left: -15px;
+}
+.header .toggle .uf{
+	font-size: 27px;
+	cursor: pointer;
+}
+.header .toggle .closed{
+	transform:rotate(7deg);
+}

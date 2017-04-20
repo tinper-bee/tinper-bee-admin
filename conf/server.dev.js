@@ -4,12 +4,17 @@ var express = require('express'),
   config = require('./webpack.dev.config'),
   app = express();
 
+var proxy = require('http-proxy-middleware');
+
 var compiler = webpack(config);
 
 // for highly stable resources
 app.use('/static', express.static(config.commonPath.staticDir));
 
 // app.use(favicon(path.join(__dirname, '../favicon.ico')));
+
+var apiProxy = proxy('/userInfo', { target: 'http://localhost:8083',changeOrigin: true });//将服务器代理到localhost:8080端口上[本地服务器为localhost:3000]
+app.use('/userInfo/*', apiProxy)
 
 // handle fallback for HTML5 history API
 app.use(require('connect-history-api-fallback')());

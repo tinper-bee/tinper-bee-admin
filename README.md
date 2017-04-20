@@ -2,7 +2,12 @@
 
 基于tinper-bee组件库编写的admin实例工程。
 
+### TODO
 
+- 封装请求及错误处理
+- draft.js文本编辑使用
+- redux结合使用
+- webpack打包资源使用CDN
 
 ## 1. start
 

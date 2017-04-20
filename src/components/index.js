@@ -1,5 +1,9 @@
 'use strict';
 
-export MyComponent from './MyComponent/index.jsx';
-export MyHeader from './Header/index.jsx';
-export Menus from './Menus/index.jsx';
+export MyComponent from './MyComponent/index';
+export MyHeader from './Header/index';
+export Menus from './Menus/index';
+export SimpleReference from './SimpleReference/index';
+export EditableCell from './EditTableCell/index';
+export PageLoading from './Loading/index';
+export LoadingTable from './LoadingTable/index';

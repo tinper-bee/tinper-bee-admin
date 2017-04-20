@@ -46,7 +46,13 @@ config.devServer = {
   inline: true,
   contentBase: publicPath,
   port: 8080,
-  stats: { colors: true }
+  stats: { colors: true },
+    proxy: {
+        '/userInfo/*': {
+            target: 'http://localhost:8083',
+            secure: false
+        }
+    }
 }
 
 /**
@@ -71,15 +77,16 @@ config.plugins.push(
   new webpack.HotModuleReplacementPlugin(),
   new webpack.NoErrorsPlugin(),
   new ExtractTextPlugin('[name].css'),
-  new BrowserSyncPlugin({
+    new BrowserSyncPlugin({
     host: '127.0.0.1',
     port: 9090,
-    proxy: 'http://127.0.0.1:9000/',
-    logConnections: false,
+    proxy: 'http://localhost:9000/',
+    logConnections: true,
     notify: false
-  }, {
+}, {
     reload: false
-  })
+})
 );
+
 
 module.exports = config;

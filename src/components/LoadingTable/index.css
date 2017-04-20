@@ -1,0 +1,19 @@
+.modal-container {
+    position: relative;
+}
+.modal-container .u-modal, .modal-container .u-modal-backdrop {
+    position: absolute;
+}
+.modal-container .u-modal-diaload{
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -55px;
+    position: absolute;
+    background: transparent;
+    height: auto;
+    width: auto;
+}
+.modal-container .u-modal-backdrop{
+    background-color: #fafafa;
+}
